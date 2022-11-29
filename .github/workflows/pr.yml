@@ -2,7 +2,7 @@ name: PR
 
 on:
   pull_request:
-    branches: [Master]
+    branches: [main]
 jobs:
   validate:
     runs-on: ubuntu-latest
@@ -15,7 +15,7 @@ jobs:
         uses: dflook/terraform-validate@v1
         id: validate
         with:
-          path: 
+          path: .
 
       - name: Validate failed
         if: ${{ failure() && steps.validate.outputs.failure-reason == 'validate-failed' }}
