@@ -1,4 +1,4 @@
-ame: Apply plan
+name: Apply plan
 
 on:
   push:
