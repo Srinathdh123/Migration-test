@@ -4,7 +4,7 @@ on:
   push:
     branches: [Master]
     paths: 
-      - 'terraform_code/*'
+      - '*'
 env:
   aws_region: ap-southeast-1
 
@@ -82,7 +82,7 @@ jobs:
 
       - name: Upload file to S3 
         run: |
-          aws s3 cp terraform_code/index.html s3://${{ secrets.AWS_BUCKET }}
+          aws s3 cp index.html s3://${{ secrets.AWS_BUCKET }}
 
       - name: start instance refresh 
         run: |
