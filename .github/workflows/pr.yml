@@ -48,7 +48,7 @@ jobs:
         uses: reviewdog/action-tfsec@master
         with:
           github_token: ${{ secrets.github_token }}
-          working_directory: terraform_code
+          working_directory: .
           level: info 
           reporter: github-pr-review 
           filter_mode: nofilter
