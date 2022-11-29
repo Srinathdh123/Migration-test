@@ -15,7 +15,7 @@ jobs:
         uses: dflook/terraform-validate@v1
         id: validate
         with:
-          path: terraform_code
+          path: 
 
       - name: Validate failed
         if: ${{ failure() && steps.validate.outputs.failure-reason == 'validate-failed' }}
