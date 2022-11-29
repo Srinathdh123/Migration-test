@@ -154,7 +154,7 @@ resource "aws_launch_template" "webserver-launch-config" {
   lifecycle {
     create_before_destroy = true
   }
-  user_data = filebase64("${path.module}/scripts/init.sh")
+  user_data = filebase64("${path.module}/init.sh")
 
 }
 
