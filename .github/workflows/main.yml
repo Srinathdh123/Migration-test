@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
     paths: 
-      - '.'
+      - '*'
 env:
   aws_region: ap-southeast-1
 
